@@ -1,0 +1,70 @@
+$primary-color: #ec9e0d;
+$secondary-color: #eec926;
+
+:host ::ng-deep .fc-header-toolbar button {
+    background-color: $primary-color !important;
+    color: white;
+    border: none !important;
+    padding: 10px 15px !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease;
+}
+
+:host ::ng-deep .fc-header-toolbar button:hover {
+    background-color: $secondary-color !important;
+}
+
+.fc-daygrid-day:hover {
+    background-color: rgba(73, 131, 75, 0.075) !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fc-daygrid-day.fc-day-today {
+    background-color: rgba(255, 223, 186, 0.5) !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+:host ::ng-deep .fc .fc-daygrid-day-number,
+:host ::ng-deep .fc .fc-col-header-cell-cushion {
+    color: black;
+    text-decoration: none;
+}
+
+:host ::ng-deep .fc button {
+    background-color: $primary-color;
+}
+
+:host ::ng-deep .fc button:hover {
+    background-color: $secondary-color;
+}
+
+:host ::ng-deep .fc button[disabled]:hover {
+    background-color: $primary-color !important;
+}
+
+:host ::ng-deep .fc .fc-event {
+    background-color: $primary-color;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 4px;
+    color: white !important;
+    border-radius: 4px;
+    padding: 5px;
+    animation: fadeIn 0.5s ease-in-out !important;
+}
+
+:host ::ng-deep .fc .fc-event:hover {
+    transform: scale(1.05);
+    background-color: $secondary-color;
+}

@@ -1,0 +1,23 @@
+<div class="event-card" *ngIf="svg">
+    <div class="event-container">
+        <div class="event-svg" *ngIf="svg" [innerHTML]="svg"></div>
+
+    </div>
+
+    <div class="event-details">
+        <h2 class="event-title">{{ event?.title }}</h2>
+        <p class="event-timing">
+            <strong>Start:</strong> {{ event?.start}}<br>
+            <strong>End:</strong> {{ event?.end }}
+        </p>
+        <p class="event-people" *ngIf="event?.people">
+            Attendees: {{ event?.people }}
+        </p>
+
+        <button class="edit-button" (click)="editEvent()">Edit</button>
+        <button class="edit-button" (click)="deleteEvent(event?.id)">Delete</button>
+        <br>
+        <a class="go-calendar" href="">Go back to calendar</a>
+
+    </div>
+</div>

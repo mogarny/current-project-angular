@@ -1,0 +1,27 @@
+<div class="add-event-container">
+    <h2>{{isEditMode ? 'Edit event' : 'Add new event'}}</h2>
+    <form [formGroup]="eventForm" (ngSubmit)="saveEvent($event)">
+        <div class="form-group">
+            <label for="title">Event Title:</label>
+            <input id="title" name="title" formControlName="title" required />
+        </div>
+
+        <div class="form-group">
+            <label for="start">Start Date:</label>
+            <input id="start" name="start" type="datetime-local" formControlName="start" required />
+        </div>
+
+        <div class="form-group">
+            <label for="end">End Date:</label>
+            <input id="end" name="end" type="datetime-local" formControlName="end" />
+        </div>
+
+        <div class="form-group">
+            <label for="people">Add People:</label>
+            <input id="people" name="people" type="text" formControlName="people">
+        </div>
+
+        <button [disabled]="!eventForm.valid" type="submit">{{ isEditMode ? 'Edit Event' : 'Add Event' }}</button>
+    </form>
+</div>
+<a href="">Go back to calendar</a>
